@@ -1,0 +1,10 @@
+node_modules
+.vscode
+.cache
+package.json
+package-lock.json
+yarn.lock
+public
+static
+dist/
+build/
