@@ -4,21 +4,15 @@
     "target": "esnext",
     "jsx": "preserve",
     "lib": ["dom", "esnext"],
-    "allowJs": true,
     "allowSyntheticDefaultImports": true,
-    "isolatedModules": true,
     "esModuleInterop": true,
+    "isolatedModules": true,
     "noEmit": true,
     "noImplicitAny": false,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "resolveJsonModule": true,
-    "plugins": [
-      {
-        "name": "typescript-styled-plugin"
-      }
-    ]
+    "resolveJsonModule": true
   },
   "exclude": ["node_modules", ".cache", "public", "content", "static"]
 }
