@@ -27,6 +27,7 @@ module.exports = {
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site. Change this
       },
     },
+    `gatsby-plugin-catch-links`,
     `gatsby-plugin-offline`,
     {
       resolve: `gatsby-source-filesystem`,
