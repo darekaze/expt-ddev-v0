@@ -19,18 +19,25 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@babel/core": "^7.8.4",
+    "@emotion/core": "^10.0.27",
+    "@emotion/styled": "^10.0.27",
+    "emotion-theming": "^10.0.27",
     "gatsby": "^2.19.7",
     "gatsby-image": "^2.2.39",
+    "gatsby-plugin-emotion": "^4.1.22",
     "gatsby-plugin-manifest": "^2.2.39",
     "gatsby-plugin-offline": "^3.0.32",
     "gatsby-plugin-react-helmet": "^3.1.21",
+    "gatsby-plugin-robots-txt": "^1.5.0",
     "gatsby-plugin-sharp": "^2.4.3",
     "gatsby-plugin-typescript": "^2.1.27",
     "gatsby-source-filesystem": "^2.1.46",
     "gatsby-transformer-sharp": "^2.3.13",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "rebass": "^4.0.7"
   },
   "devDependencies": {
     "@types/node": "^13.7.0",
@@ -62,6 +69,7 @@
     "trailingComma": "all",
     "bracketSpacing": true,
     "jsxBracketSameLine": true,
+    "jsxSingleQuote": true,
     "arrowParens": "avoid",
     "endOfLine": "lf"
   },
