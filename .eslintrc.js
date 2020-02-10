@@ -37,10 +37,7 @@ module.exports = {
   },
   rules: {
     'prettier/prettier': 'warn',
-    // https://basarat.gitbooks.io/typescript/docs/tips/defaultIsBad.html
     'import/prefer-default-export': 'off',
-    'import/no-default-export': 'error',
-    // ts-eslint and react settings
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-member-accessibility': 'off',
     '@typescript-eslint/indent': 'off',
