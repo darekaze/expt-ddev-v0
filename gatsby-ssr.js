@@ -5,4 +5,4 @@
  * See: https://www.gatsbyjs.org/docs/ssr-apis/
  */
 
-export { wrapRootElement } from './src/Provider'
+export { wrapRootElement } from './src/layouts/Base'

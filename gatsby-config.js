@@ -28,6 +28,21 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: ['.mdx', '.md'],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1080,
+              tracedSVG: true,
+            },
+          },
+        ],
+      },
+    },
+    {
       resolve: `gatsby-plugin-graphql-codegen`,
       options: {
         fileName: `@types/graphql-types.d.ts`,
