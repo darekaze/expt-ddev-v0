@@ -7,20 +7,25 @@
 
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+import scrollTo from 'gatsby-plugin-smoothscroll'
 
 import Header from './header'
-import './layout.css'
+import { SiteInfoQuery } from '../../@types/graphql-types'
+// import './layout.css'
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
+export const pageQuery = graphql`
+  query SiteInfo {
+    site {
+      siteMetadata {
+        title
+        description
       }
     }
-  `)
+  }
+`
+
+export const Layout = ({ children }) => {
+  const data = useStaticQuery<SiteInfoQuery>(pageQuery)
 
   return (
     <>
@@ -35,11 +40,9 @@ const Layout = ({ children }) => {
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <a href='https://www.gatsbyjs.org'>Gatsby</a>
         </footer>
       </div>
     </>
   )
 }
-
-export default Layout

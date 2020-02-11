@@ -1,7 +1,11 @@
 import { Link } from 'gatsby'
 import React from 'react'
 
-const Header = ({ siteTitle }) => (
+type IHeaderProps = {
+  siteTitle: string
+}
+
+const Header: React.FC<IHeaderProps> = ({ siteTitle = '' }) => (
   <header
     style={{
       background: `rebeccapurple`,
@@ -15,7 +19,7 @@ const Header = ({ siteTitle }) => (
       }}>
       <h1 style={{ margin: 0 }}>
         <Link
-          to="/"
+          to='/'
           style={{
             color: `white`,
             textDecoration: `none`,
@@ -26,9 +30,5 @@ const Header = ({ siteTitle }) => (
     </div>
   </header>
 )
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header
