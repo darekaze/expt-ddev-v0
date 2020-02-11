@@ -3,7 +3,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Darwin Jahja | Full Stack Software Engineer',
-    // siteUrl: 'https://darekaze.dev',
+    siteUrl: 'https://darekaze.dev',
     description:
       'Darwin Jahja (a.k.a @darekaze) is a Full Stack Software Engineer based in HK & Macao who specializes in creating and developing exceptional, high-quality websites and applications.',
     author: '@darekaze',
@@ -27,6 +27,14 @@ module.exports = {
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site. Change this
       },
     },
+    {
+      resolve: `gatsby-plugin-graphql-codegen`,
+      options: {
+        fileName: `@types/graphql-types.d.ts`,
+        documentPaths: ['./src/**/*.{ts,tsx}', './node_modules/gatsby-*/**/*.js'],
+      },
+    },
+    `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-offline`,
     {
