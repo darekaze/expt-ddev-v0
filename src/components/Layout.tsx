@@ -11,7 +11,6 @@ import scrollTo from 'gatsby-plugin-smoothscroll'
 
 import Header from './header'
 import { SiteInfoQuery } from '../../@types/graphql-types'
-// import './layout.css'
 
 export const pageQuery = graphql`
   query SiteInfo {

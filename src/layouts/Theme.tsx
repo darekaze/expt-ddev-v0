@@ -27,6 +27,8 @@ const gcss = css`
     background-color: ${theme.colors.background};
     color: ${theme.colors.text};
     font-family: ${theme.fonts.body};
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 `
 
