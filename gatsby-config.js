@@ -6,7 +6,7 @@ module.exports = {
     siteUrl: 'https://darekaze.dev',
     description:
       'Darwin Jahja (a.k.a @darekaze) is a Full Stack Software Engineer based in HK & Macao who specializes in creating and developing exceptional, high-quality websites and applications.',
-    author: '@darekaze',
+    author: 'DaRekaze',
   },
   plugins: [
     `gatsby-plugin-typescript`,

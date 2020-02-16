@@ -4,6 +4,7 @@ export const config = {
   location: 'Hong Kong & Macao',
   email: 'darekaze@outlook.com',
   github: 'https://github.com/darekaze',
+  twitterHandler: '@_darekaze',
   socialMedia: [
     {
       name: 'GitHub',

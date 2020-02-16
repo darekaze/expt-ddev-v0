@@ -1,12 +1,12 @@
 import React from 'react'
 import { Button } from 'rebass'
 
-import { Layout } from '../components/Layout'
+import { Layout } from '../layouts/BaseLayout'
 import { SEO } from '../components/SEO'
 
 const IndexPage: React.FC = () => (
   <Layout>
-    <SEO title='Home' />
+    <SEO />
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>

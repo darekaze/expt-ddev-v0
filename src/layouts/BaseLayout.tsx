@@ -1,59 +1,26 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from 'react'
-import Helmet from 'react-helmet'
-import { useStaticQuery, graphql } from 'gatsby'
 import { Box } from 'rebass'
 
-type ISEOProps = {
-  description?: string
-  lang?: string
-  meta?: any[]
-  title: string
-}
+import Header from '../components/Header'
 
-export const SEO: React.FC<ISEOProps> = ({ description = '', lang = 'en', meta = [], title }) => {
-  const { site } = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-          description
-          author
-        }
-      }
-    }
-  `)
+export const Layout: React.FC = ({ children }) => (
+  <>
+    <Header />
+    <Box
+      sx={{
+        margin: `0 auto`,
+        maxWidth: 960,
+        padding: `0 1.0875rem 1.45rem`,
+      }}>
+      <Box as='main'>{children}</Box>
 
-  const metaDescription = description || site.siteMetadata.description
-
-  return (
-    <>
-      <Helmet
-        htmlAttributes={{
-          lang,
-        }}
-        title={title}
-        titleTemplate={`%s | ${site.siteMetadata.title}`}
-        meta={[
-          { name: `description`, content: metaDescription },
-          { property: `og:title`, content: title },
-          { property: `og:description`, content: metaDescription },
-          { property: `og:type`, content: `website` },
-          { name: `twitter:card`, content: `summary` },
-          { name: `twitter:creator`, content: site.siteMetadata.author },
-          { name: `twitter:title`, content: title },
-          { name: `twitter:description`, content: metaDescription },
-        ].concat(meta)}
-        link={[]}
-      />
-
-      <Box>Haha</Box>
-    </>
-  )
-}
+      {/* TODO: edit footer, make component */}
+      <footer>
+        © {new Date().getFullYear()}, Built with
+        {` `}
+        <a href='https://www.gatsbyjs.org'>Gatsby</a>
+      </footer>
+      {/* --- */}
+    </Box>
+  </>
+)

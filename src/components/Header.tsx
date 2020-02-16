@@ -2,10 +2,10 @@ import { Link } from 'gatsby'
 import React from 'react'
 
 type IHeaderProps = {
-  siteTitle: string
+  siteTitle?: string
 }
 
-const Header: React.FC<IHeaderProps> = ({ siteTitle = '' }) => (
+const Header: React.FC<IHeaderProps> = ({ siteTitle = 'Darekaze' }) => (
   <header
     style={{
       background: `rebeccapurple`,
