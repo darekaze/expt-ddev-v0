@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
-import { config } from '../config'
+import { config } from '~/config'
 
 type ISEOProps = {
   title?: string

@@ -1,7 +1,6 @@
 import React from 'react'
-
-import { Layout } from '../layouts/BaseLayout'
-import { SEO } from '../components/SEO'
+import { Layout } from '~/layouts/BaseLayout'
+import { SEO } from '~/components/SEO'
 
 const NotFoundPage: React.FC = () => (
   <Layout>

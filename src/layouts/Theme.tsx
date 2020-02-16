@@ -4,8 +4,7 @@ import React from 'react'
 import { ThemeProvider } from 'emotion-theming'
 import { Global, css } from '@emotion/core'
 import * as rebass from 'rebass'
-
-import { theme } from '../config/theme'
+import { theme } from '~/config/theme'
 
 const gcss = css`
   html {

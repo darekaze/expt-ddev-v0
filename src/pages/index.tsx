@@ -1,8 +1,7 @@
 import React from 'react'
 import { Button } from 'rebass'
-
-import { Layout } from '../layouts/BaseLayout'
-import { SEO } from '../components/SEO'
+import { Layout } from '~/layouts/BaseLayout'
+import { SEO } from '~/components/SEO'
 
 const IndexPage: React.FC = () => (
   <Layout>

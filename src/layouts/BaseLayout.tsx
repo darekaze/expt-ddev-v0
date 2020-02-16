@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box } from 'rebass'
 
-import Header from '../components/Header'
+import Header from '~/components/Header'
 
 export const Layout: React.FC = ({ children }) => (
   <>
