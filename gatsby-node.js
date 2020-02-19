@@ -13,6 +13,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
     resolve: {
       alias: {
         '~': path.resolve(__dirname, 'src'),
+        '@gql-types': path.resolve(__dirname, '@types/graphql-types.d.ts'),
       },
     },
   })

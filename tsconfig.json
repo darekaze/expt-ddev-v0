@@ -14,7 +14,10 @@
     "noUnusedParameters": true,
     "resolveJsonModule": true,
     "baseUrl": ".",
-    "paths": { "~/*": ["src/*"] }
+    "paths": {
+      "~/*": ["src/*"],
+      "@gql-types": ["@types/graphql-types.d.ts"]
+    }
   },
   "exclude": ["node_modules", ".cache", "public", "content", "static"]
 }

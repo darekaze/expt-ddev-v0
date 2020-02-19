@@ -1,6 +1,8 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
+
+import { SeoMetaQuery } from '@gql-types'
 import { config } from '~/config'
 
 type ISEOProps = {
@@ -10,19 +12,21 @@ type ISEOProps = {
   meta?: any[]
 }
 
-export const SEO: React.FC<ISEOProps> = ({ title, description, lang = 'en', meta = [] }) => {
-  const { site } = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-          description
-          author
-          siteUrl
-        }
+export const pageQuery = graphql`
+  query SEOMeta {
+    site {
+      siteMetadata {
+        title
+        description
+        author
+        siteUrl
       }
     }
-  `)
+  }
+`
+
+export const SEO: React.FC<ISEOProps> = ({ title, description, lang = 'en', meta = [] }) => {
+  const { site } = useStaticQuery<SeoMetaQuery>(pageQuery)
 
   const metaTitle = title || site.siteMetadata.title
   const metaDescription = description || site.siteMetadata.description
