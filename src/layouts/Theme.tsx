@@ -9,7 +9,7 @@ import { theme } from '~/config/theme'
 const gcss = css`
   html {
     box-sizing: border-box;
-    width: 100%;
+    overflow-x: hidden;
   }
 
   *,
@@ -19,15 +19,22 @@ const gcss = css`
   }
 
   body {
-    margin: 0;
-    width: 100%;
-    min-height: 100%;
+    margin: 0px;
     overflow-x: hidden;
     background-color: ${theme.colors.background};
     color: ${theme.colors.text};
     font-family: ${theme.fonts.body};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  div[role='group'][tabindex] {
+    display: flex;
+    flex-direction: column;
+    min-height: -webkit-fill-available;
+    min-height: 100vh;
+    max-width: 100%;
+    position: relative;
   }
 `
 

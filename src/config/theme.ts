@@ -1,7 +1,8 @@
 // For spec details, see:
-// https://github.com/system-ui/theme-specification
+// https://rebassjs.org/reflexbox#theming
 
 export const theme = {
+  breakpoints: ['600px', '960px', '1264px'],
   colors: {
     text: '#000',
     background: '#fff',
@@ -101,6 +102,7 @@ export const theme = {
       bg: 'secondary',
     },
   },
+  // theme-ui variants
   styles: {
     root: {
       fontFamily: 'body',
