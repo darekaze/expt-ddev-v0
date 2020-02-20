@@ -1,10 +1,12 @@
 import React from 'react'
 import { Box } from 'rebass'
 import { Header } from '~/components/Header'
+import { SocialBar } from '~/components/SocialBar'
 
 export const Layout: React.FC = ({ children }) => (
   <>
     <Header />
+    <SocialBar />
     <Box
       as='main'
       width='100%'

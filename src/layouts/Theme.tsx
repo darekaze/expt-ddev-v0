@@ -36,6 +36,11 @@ const gcss = css`
     max-width: 100%;
     position: relative;
   }
+
+  svg {
+    fill: currentcolor;
+    vertical-align: middle;
+  }
 `
 
 export const UIComponents = {

@@ -75,6 +75,14 @@ export const theme = {
       p: 3,
       zIndex: 51,
     },
+    social: {
+      position: 'fixed',
+      top: 0,
+      left: '40px',
+      flexDirection: 'column',
+      alignItem: 'center',
+      zIndex: 52,
+    },
     link: {
       color: 'primary',
     },
