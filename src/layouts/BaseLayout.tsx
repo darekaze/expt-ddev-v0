@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box } from 'rebass'
-import Header from '~/components/Header'
+import { Header } from '~/components/Header'
 
 export const Layout: React.FC = ({ children }) => (
   <>
@@ -8,7 +8,7 @@ export const Layout: React.FC = ({ children }) => (
     <Box
       as='main'
       width='100%'
-      minHeight='90vh'
+      minHeight='100vh'
       maxWidth='1440px'
       px={['25px', '50px', '100px', '150px']}>
       {children}

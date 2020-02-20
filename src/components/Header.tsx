@@ -1,34 +1,32 @@
-import { Link } from 'gatsby'
 import React from 'react'
+import { Link as RouterLink } from 'gatsby'
+import { Box, Flex, Link } from 'rebass'
 
-type IHeaderProps = {
-  siteTitle?: string
+export const Header: React.FC = () => {
+  return (
+    <Flex as='header' variant='header'>
+      {/* TODO: 'scroll jump' here */}
+
+      <Box mx='auto' />
+      <Link as={RouterLink} variant='nav' href='#!'>
+        Blog
+      </Link>
+      <Link as={RouterLink} variant='nav' href='#!'>
+        Resources
+      </Link>
+
+      {/* TODO: change to svg logo */}
+      <Link
+        as={RouterLink}
+        variant='nav'
+        href='/'
+        sx={{
+          fontWeight: 'bold',
+          textTransform: 'none',
+          userSelect: 'none',
+        }}>
+        DaR
+      </Link>
+    </Flex>
+  )
 }
-
-const Header: React.FC<IHeaderProps> = ({ siteTitle = 'Darekaze' }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}>
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}>
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to='/'
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}>
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
-
-export default Header
