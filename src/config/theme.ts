@@ -4,8 +4,8 @@
 export const theme = {
   breakpoints: ['600px', '960px', '1264px'],
   colors: {
-    text: '#000',
-    background: '#fff',
+    text: '#8BADC1',
+    background: '#001122',
     primary: '#07c',
     secondary: '#30c',
     muted: '#f6f6f9',
@@ -67,16 +67,26 @@ export const theme = {
       bg: 'background',
       boxShadow: 'card',
     },
+    header: {
+      position: 'fixed',
+      top: 0,
+      width: '100%',
+      alignItem: 'center',
+      p: 3,
+      zIndex: 51,
+    },
     link: {
       color: 'primary',
     },
     nav: {
       fontSize: 1,
-      fontWeight: 'bold',
       display: 'inline-block',
-      p: 2,
+      px: '16px',
+      py: '12px',
+      outline: 'none',
       color: 'inherit',
       textDecoration: 'none',
+      textTransform: 'uppercase',
       ':hover,:focus,.active': {
         color: 'primary',
       },

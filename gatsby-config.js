@@ -18,11 +18,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'DarwinJahja',
-        short_name: 'DarwinJahja',
+        name: 'darekaze',
+        short_name: 'darekaze',
         start_url: '/',
-        background_color: '#020c1b',
-        theme_color: '#0a192f',
+        background_color: '#001122',
+        theme_color: '#001122',
         display: 'minimal-ui',
         icon: 'src/assets/img/gatsby-icon.png',
       },
