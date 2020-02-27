@@ -41,15 +41,65 @@ export const theme = {
   },
   // rebass variants
   text: {
-    heading: {
+    header: {
       fontFamily: 'heading',
-      lineHeight: 'heading',
-      fontWeight: 'heading',
+      lineHeight: '1.25',
+      fontSize: [4, 4, 5, 6],
+      marginBottom: 3,
+      color: 'text',
+    },
+    subheader: {
+      fontFamily: 'heading',
+      lineHeight: '1.25',
+      fontSize: [3, 3, 4, 4],
+      marginBottom: 3,
+      color: 'text',
+    },
+    h2: {
+      fontFamily: 'heading',
+      lineHeight: '1.25',
+      fontSize: [2, 3, 4, 5],
+      marginBottom: 3,
+      color: 'text',
+    },
+    h3: {
+      fontFamily: 'heading',
+      lineHeight: '1.25',
+      fontSize: [2, 2, 3, 3],
+      marginBottom: 3,
+      color: 'text',
+    },
+    h4: {
+      fontFamily: 'heading',
+      lineHeight: '1.25',
+      fontSize: [1],
+      marginBottom: 3,
+      color: 'text',
+    },
+    label: {
+      fontFamily: 'heading',
+      lineHeight: '1.25',
+      fontSize: [0],
+      letterSpacing: '0.1em',
+      textTransform: 'uppercase',
+      marginBottom: 2,
+    },
+    paragraph: {
+      fontFamily: 'body',
+      lineHeight: '1.75',
+      fontSize: [1, 2],
+      marginBottom: 4,
+      color: 'text',
+    },
+    list: {
+      fontFamily: 'body',
+      lineHeight: '1.75',
+      fontSize: [1, 2],
+      marginBottom: 3,
     },
     display: {
-      fontFamily: 'heading',
-      fontWeight: 'heading',
-      lineHeight: 'heading',
+      fontFamily: 'body',
+      lineHeight: '1.5',
       fontSize: [5, 6, 7],
     },
     caps: {
@@ -67,6 +117,16 @@ export const theme = {
       p: 2,
       bg: 'background',
       boxShadow: 'card',
+    },
+    hero: {
+      flexDirection: 'column',
+      justifyContent: 'center',
+      minHeight: '100vh',
+      maxWidth: '1000px',
+      mx: 'auto',
+      my: 0,
+      px: 0,
+      py: '150px',
     },
     header: {
       position: 'fixed',
