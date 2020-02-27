@@ -28,8 +28,8 @@ export const Hero: React.FC = () => {
       <Box mb={4}>
         <Heading variant='label'>Live for</Heading>
         <Heading fontSize={[1, 2]}>
-          clean design, <br />
-          accessible UX,
+          clean code, <br />
+          neat UI/UX,
           <br />
           &amp; cutting-edge tech
         </Heading>
