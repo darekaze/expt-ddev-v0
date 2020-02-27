@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Flex } from 'rebass'
-import { NavLink } from '~/components/link'
+import { NavLink } from '~/components/links'
 
 export const Header: React.FC = () => {
   // TODO: make border color #29c5c5 and py = 2 after scroll
