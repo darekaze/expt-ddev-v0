@@ -1,32 +1,27 @@
 import React from 'react'
-import { Link as RouterLink } from 'gatsby'
-import { Box, Flex, Link } from 'rebass'
+import { Box, Flex } from 'rebass'
+import { NavLink } from '~/components/link'
 
 export const Header: React.FC = () => {
+  // TODO: make border color #29c5c5 and py = 2 after scroll
   return (
     <Flex as='header' variant='header'>
-      {/* TODO: 'scroll jump' here */}
-
       <Box mx='auto' />
-      <Link as={RouterLink} variant='nav' href='#!'>
-        Blog
-      </Link>
-      <Link as={RouterLink} variant='nav' href='#!'>
-        Resources
-      </Link>
+      <Box display={['none', 'inline']}>
+        <NavLink href='#!'>Blog</NavLink>
+        <NavLink href='#!'>Resources</NavLink>
+      </Box>
 
-      {/* TODO: change to svg logo */}
-      <Link
-        as={RouterLink}
-        variant='nav'
+      {/* TODO: make and change to svg logo */}
+      <NavLink
         href='/'
         sx={{
           fontWeight: 'bold',
-          textTransform: 'none',
-          userSelect: 'none',
+          textTransform: 'none !important',
         }}>
         DaR
-      </Link>
+      </NavLink>
+      {/* TODO: add mobile menu button here */}
     </Flex>
   )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { Box, Flex, Link } from 'rebass'
+import { Box, Link } from 'rebass'
 import { FormattedIcon } from '~/components/icons'
 import { config } from '~/config'
 
@@ -15,8 +15,8 @@ const StyledLink = styled(Link)`
 export const SocialBar: React.FC = () => {
   const { socialMedia } = config
   return (
-    <Flex variant='social'>
-      <Box bg='text' alignSelf='center' width='2px' height='90px' mb='12px' />
+    <Box variant='social' display={['none', null, 'flex']}>
+      <Box bg='text' alignSelf='center' width='2px' height='87px' mb='10px' />
       {socialMedia &&
         socialMedia.map(({ name, url }) => (
           <StyledLink
@@ -28,6 +28,6 @@ export const SocialBar: React.FC = () => {
             <FormattedIcon name={name} />
           </StyledLink>
         ))}
-    </Flex>
+    </Box>
   )
 }

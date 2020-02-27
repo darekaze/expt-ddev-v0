@@ -11,6 +11,7 @@ export const theme = {
     muted: '#f6f6f9',
     gray: '#dddddf',
     highlight: 'hsla(205, 100%, 40%, 0.125)',
+    cyan: '#29c5c5',
   },
   fonts: {
     body: 'system-ui, sans-serif',
@@ -69,33 +70,27 @@ export const theme = {
     },
     header: {
       position: 'fixed',
-      top: 0,
       width: '100%',
       alignItem: 'center',
-      p: 3,
       zIndex: 51,
+      p: 3,
     },
     social: {
       position: 'fixed',
       top: 0,
       left: '40px',
+      zIndex: 52,
       flexDirection: 'column',
       alignItem: 'center',
-      zIndex: 52,
     },
     link: {
-      color: 'primary',
-    },
-    nav: {
-      fontSize: 1,
       display: 'inline-block',
-      px: '16px',
-      py: '12px',
       outline: 'none',
-      color: 'inherit',
       textDecoration: 'none',
-      textTransform: 'uppercase',
-      ':hover,:focus,.active': {
+      textDecorationSkipInk: 'auto',
+      color: 'inherit',
+      transition: 'all 100ms linear',
+      ':hover,:focus': {
         color: 'primary',
       },
     },
