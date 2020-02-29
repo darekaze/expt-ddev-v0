@@ -1,7 +1,8 @@
 import React from 'react'
 import { Box } from 'rebass'
-import { Header } from '~/components/Header'
-import { SocialBar } from '~/components/SocialBar'
+import { Header } from '~/layouts/Header'
+import { SocialBar } from '~/layouts/SocialBar'
+import { Footer } from './Footer'
 
 export const Layout: React.FC = ({ children }) => (
   <>
@@ -15,8 +16,6 @@ export const Layout: React.FC = ({ children }) => (
       px={['25px', '50px', '100px', '150px']}>
       {children}
     </Box>
-
-    {/* TODO: edit footer, make component */}
-    <Box as='footer'>© 2019-{new Date().getFullYear()}, Darwin++ a.k.a DaRekaze</Box>
+    <Footer />
   </>
 )
