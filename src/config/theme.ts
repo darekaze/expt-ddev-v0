@@ -122,6 +122,8 @@ export const theme = {
       m: '0px auto',
       p: '150px 0px',
       minHeight: '100vh',
+      position: 'relative',
+      overflow: 'hidden',
       flexDirection: 'column',
       justifyContent: 'center',
     },

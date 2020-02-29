@@ -1,5 +1,16 @@
 import React from 'react'
+import { keyframes } from '@emotion/core'
 import { Box, Heading, Flex } from 'rebass'
+import HeroSVG from '~/assets/svg/hero.svg'
+
+const spin = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`
 
 export const Hero: React.FC = () => {
   return (
@@ -7,8 +18,21 @@ export const Hero: React.FC = () => {
       as='section'
       variant='hero'
       sx={{
+        textAlign: 'end',
         alignItems: 'flex-end',
-        textAlign: 'right',
+        '&::before': {
+          alignSelf: 'start',
+          content: "''",
+          position: 'absolute',
+          width: ['300px', null, '500px'],
+          height: ['300px', null, '500px'],
+          zIndex: -1,
+          backgroundImage: `url(${HeroSVG})`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          animation: `${spin} infinite 30s linear`,
+        },
       }}>
       <Box mb={4}>
         <Heading variant='label'>Hello there, I&#39;m</Heading>
