@@ -3,6 +3,8 @@ import { keyframes } from '@emotion/core'
 import { Box, Heading, Flex } from 'rebass'
 import HeroSVG from '~/assets/svg/hero.svg'
 
+// TODO: change logo to style-system hex
+
 const spin = keyframes`
   from {
     transform: rotate(0deg);
@@ -20,18 +22,18 @@ export const Hero: React.FC = () => {
       sx={{
         textAlign: 'end',
         alignItems: 'flex-end',
-        '&::before': {
-          alignSelf: 'start',
+        ':before': {
+          alignSelf: 'center',
           content: "''",
           position: 'absolute',
-          width: ['300px', null, '500px'],
-          height: ['300px', null, '500px'],
+          ml: [0, 0, 3, 6],
+          width: ['300px', '500px', '640px', '780px'],
+          height: ['300px', '500px', '640px', '780px'],
           zIndex: -1,
-          backgroundImage: `url(${HeroSVG})`,
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          animation: `${spin} infinite 30s linear`,
+          backgroundColor: 'primary',
+          maskImage: `url(${HeroSVG})`,
+          opacity: 0.54,
+          animation: `${spin} infinite 64s linear`,
         },
       }}>
       <Box mb={4}>
