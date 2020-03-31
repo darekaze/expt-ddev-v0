@@ -12,7 +12,7 @@ type ISEOProps = {
   meta?: any[]
 }
 
-export const pageQuery = graphql`
+export const queryStr = graphql`
   query SEOMeta {
     site {
       siteMetadata {
@@ -26,7 +26,7 @@ export const pageQuery = graphql`
 `
 
 export const SEO: React.FC<ISEOProps> = ({ title, description, lang = 'en', meta = [] }) => {
-  const { site } = useStaticQuery<SeoMetaQuery>(pageQuery)
+  const { site } = useStaticQuery<SeoMetaQuery>(queryStr)
 
   const metaTitle = title || site.siteMetadata.title
   const metaDescription = description || site.siteMetadata.description

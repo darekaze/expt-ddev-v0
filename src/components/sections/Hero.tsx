@@ -3,8 +3,6 @@ import { keyframes } from '@emotion/core'
 import { Box, Heading, Flex } from 'rebass'
 import HeroSVG from '~/assets/svg/hero.svg'
 
-// TODO: change logo to style-system hex
-
 const spin = keyframes`
   from {
     transform: rotate(0deg);
