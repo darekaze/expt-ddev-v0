@@ -690,6 +690,43 @@ export type FileFieldsEnum =
   'childMdx___rawBody' |
   'childMdx___fileAbsolutePath' |
   'childMdx___frontmatter___title' |
+  'childMdx___frontmatter___avatar___sourceInstanceName' |
+  'childMdx___frontmatter___avatar___absolutePath' |
+  'childMdx___frontmatter___avatar___relativePath' |
+  'childMdx___frontmatter___avatar___extension' |
+  'childMdx___frontmatter___avatar___size' |
+  'childMdx___frontmatter___avatar___prettySize' |
+  'childMdx___frontmatter___avatar___modifiedTime' |
+  'childMdx___frontmatter___avatar___accessTime' |
+  'childMdx___frontmatter___avatar___changeTime' |
+  'childMdx___frontmatter___avatar___birthTime' |
+  'childMdx___frontmatter___avatar___root' |
+  'childMdx___frontmatter___avatar___dir' |
+  'childMdx___frontmatter___avatar___base' |
+  'childMdx___frontmatter___avatar___ext' |
+  'childMdx___frontmatter___avatar___name' |
+  'childMdx___frontmatter___avatar___relativeDirectory' |
+  'childMdx___frontmatter___avatar___dev' |
+  'childMdx___frontmatter___avatar___mode' |
+  'childMdx___frontmatter___avatar___nlink' |
+  'childMdx___frontmatter___avatar___uid' |
+  'childMdx___frontmatter___avatar___gid' |
+  'childMdx___frontmatter___avatar___rdev' |
+  'childMdx___frontmatter___avatar___ino' |
+  'childMdx___frontmatter___avatar___atimeMs' |
+  'childMdx___frontmatter___avatar___mtimeMs' |
+  'childMdx___frontmatter___avatar___ctimeMs' |
+  'childMdx___frontmatter___avatar___atime' |
+  'childMdx___frontmatter___avatar___mtime' |
+  'childMdx___frontmatter___avatar___ctime' |
+  'childMdx___frontmatter___avatar___birthtime' |
+  'childMdx___frontmatter___avatar___birthtimeMs' |
+  'childMdx___frontmatter___avatar___blksize' |
+  'childMdx___frontmatter___avatar___blocks' |
+  'childMdx___frontmatter___avatar___publicURL' |
+  'childMdx___frontmatter___avatar___id' |
+  'childMdx___frontmatter___avatar___children' |
+  'childMdx___frontmatter___skills' |
   'childMdx___body' |
   'childMdx___excerpt' |
   'childMdx___headings' |
@@ -1417,6 +1454,68 @@ export type MdxFieldsEnum =
   'rawBody' |
   'fileAbsolutePath' |
   'frontmatter___title' |
+  'frontmatter___avatar___sourceInstanceName' |
+  'frontmatter___avatar___absolutePath' |
+  'frontmatter___avatar___relativePath' |
+  'frontmatter___avatar___extension' |
+  'frontmatter___avatar___size' |
+  'frontmatter___avatar___prettySize' |
+  'frontmatter___avatar___modifiedTime' |
+  'frontmatter___avatar___accessTime' |
+  'frontmatter___avatar___changeTime' |
+  'frontmatter___avatar___birthTime' |
+  'frontmatter___avatar___root' |
+  'frontmatter___avatar___dir' |
+  'frontmatter___avatar___base' |
+  'frontmatter___avatar___ext' |
+  'frontmatter___avatar___name' |
+  'frontmatter___avatar___relativeDirectory' |
+  'frontmatter___avatar___dev' |
+  'frontmatter___avatar___mode' |
+  'frontmatter___avatar___nlink' |
+  'frontmatter___avatar___uid' |
+  'frontmatter___avatar___gid' |
+  'frontmatter___avatar___rdev' |
+  'frontmatter___avatar___ino' |
+  'frontmatter___avatar___atimeMs' |
+  'frontmatter___avatar___mtimeMs' |
+  'frontmatter___avatar___ctimeMs' |
+  'frontmatter___avatar___atime' |
+  'frontmatter___avatar___mtime' |
+  'frontmatter___avatar___ctime' |
+  'frontmatter___avatar___birthtime' |
+  'frontmatter___avatar___birthtimeMs' |
+  'frontmatter___avatar___blksize' |
+  'frontmatter___avatar___blocks' |
+  'frontmatter___avatar___publicURL' |
+  'frontmatter___avatar___childImageSharp___id' |
+  'frontmatter___avatar___childImageSharp___children' |
+  'frontmatter___avatar___id' |
+  'frontmatter___avatar___parent___id' |
+  'frontmatter___avatar___parent___children' |
+  'frontmatter___avatar___children' |
+  'frontmatter___avatar___children___id' |
+  'frontmatter___avatar___children___children' |
+  'frontmatter___avatar___internal___content' |
+  'frontmatter___avatar___internal___contentDigest' |
+  'frontmatter___avatar___internal___description' |
+  'frontmatter___avatar___internal___fieldOwners' |
+  'frontmatter___avatar___internal___ignoreType' |
+  'frontmatter___avatar___internal___mediaType' |
+  'frontmatter___avatar___internal___owner' |
+  'frontmatter___avatar___internal___type' |
+  'frontmatter___avatar___childMdx___rawBody' |
+  'frontmatter___avatar___childMdx___fileAbsolutePath' |
+  'frontmatter___avatar___childMdx___body' |
+  'frontmatter___avatar___childMdx___excerpt' |
+  'frontmatter___avatar___childMdx___headings' |
+  'frontmatter___avatar___childMdx___html' |
+  'frontmatter___avatar___childMdx___mdxAST' |
+  'frontmatter___avatar___childMdx___tableOfContents' |
+  'frontmatter___avatar___childMdx___timeToRead' |
+  'frontmatter___avatar___childMdx___id' |
+  'frontmatter___avatar___childMdx___children' |
+  'frontmatter___skills' |
   'body' |
   'excerpt' |
   'headings' |
@@ -1536,10 +1635,14 @@ export type MdxFilterInput = {
 
 export type MdxFrontmatter = {
   title: Scalars['String'],
+  avatar?: Maybe<File>,
+  skills?: Maybe<Array<Maybe<Scalars['String']>>>,
 };
 
 export type MdxFrontmatterFilterInput = {
   title?: Maybe<StringQueryOperatorInput>,
+  avatar?: Maybe<FileFilterInput>,
+  skills?: Maybe<StringQueryOperatorInput>,
 };
 
 export type MdxGroupConnection = {
@@ -2666,6 +2769,17 @@ export type SeoMetaQueryVariables = {};
 
 
 export type SeoMetaQuery = { site: Maybe<{ siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author' | 'siteUrl'>> }> };
+
+export type AboutMeQueryVariables = {};
+
+
+export type AboutMeQuery = { mdx: Maybe<(
+    Pick<Mdx, 'body'>
+    & { frontmatter: Maybe<(
+      Pick<MdxFrontmatter, 'title' | 'skills'>
+      & { avatar: Maybe<{ childImageSharp: Maybe<{ fluid: Maybe<GatsbyImageSharpFluid_WithWebp_TracedSvgFragment> }> }> }
+    )> }
+  )> };
 
 export type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
